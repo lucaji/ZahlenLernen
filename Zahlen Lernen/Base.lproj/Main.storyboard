@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VIa-uF-51w">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Zahlen Lernen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Zahlen_Lernen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nwX-gs-mpI">
+                                <rect key="frame" x="36" y="134" width="303" height="90"/>
+                                <color key="backgroundColor" red="0.86919005540000005" green="1" blue="0.7175147959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="Ine-sb-XCJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIv-e7-XDj">
+                                <rect key="frame" x="131" y="600" width="112" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Sag Mal!"/>
+                                <connections>
+                                    <action selector="sagmalButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H8W-l7-0oU"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" text="eins zwei.." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Iwk-dx-iXy">
+                                <rect key="frame" x="34" y="268" width="303" height="230"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.86919005540000005" green="1" blue="0.7175147959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                            </textView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.20000000000000001" maxValue="0.80000000000000004" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4C-Wl-uo7">
+                                <rect key="frame" x="54" y="546" width="267" height="31"/>
+                                <connections>
+                                    <action selector="utteranceRateSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="tSv-aG-eQn"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="uOj-NW-Mdh">
+                                <rect key="frame" x="34" y="84" width="195" height="31"/>
+                                <connections>
+                                    <action selector="auftragSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="K5u-K3-JH8"/>
+                                </connections>
+                            </slider>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1000000" translatesAutoresizingMaskIntoConstraints="NO" id="jJe-WX-BPz">
+                                <rect key="frame" x="256" y="85" width="94" height="29"/>
+                                <connections>
+                                    <action selector="auftragStepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="a8t-Zb-F2d"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.86919005540000005" green="1" blue="0.7175147959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="f4C-Wl-uo7" secondAttribute="trailing" constant="40" id="0ew-YZ-GnU"/>
+                            <constraint firstItem="Iwk-dx-iXy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="1pB-L7-ir1"/>
+                            <constraint firstItem="nwX-gs-mpI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1t7-Yv-xQP"/>
+                            <constraint firstItem="uOj-NW-Mdh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="3Mh-HO-2os"/>
+                            <constraint firstItem="nwX-gs-mpI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="4Rz-fT-LSi"/>
+                            <constraint firstItem="f4C-Wl-uo7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="8ts-VJ-6xr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Iwk-dx-iXy" secondAttribute="trailing" constant="22" id="9XH-mO-6YZ"/>
+                            <constraint firstItem="rIv-e7-XDj" firstAttribute="top" secondItem="f4C-Wl-uo7" secondAttribute="bottom" constant="24" id="BaR-qS-fvu"/>
+                            <constraint firstItem="Iwk-dx-iXy" firstAttribute="top" secondItem="nwX-gs-mpI" secondAttribute="bottom" constant="44" id="Cxf-Yu-bnV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jJe-WX-BPz" secondAttribute="trailing" constant="9" id="F9E-Xe-6Cb"/>
+                            <constraint firstItem="jJe-WX-BPz" firstAttribute="leading" secondItem="uOj-NW-Mdh" secondAttribute="trailing" constant="29" id="Vfs-Oi-w1s"/>
+                            <constraint firstItem="rIv-e7-XDj" firstAttribute="centerX" secondItem="nwX-gs-mpI" secondAttribute="centerX" id="WlD-lQ-Cha"/>
+                            <constraint firstItem="f4C-Wl-uo7" firstAttribute="top" secondItem="Iwk-dx-iXy" secondAttribute="bottom" constant="48" id="Xss-US-N76"/>
+                            <constraint firstAttribute="bottom" secondItem="rIv-e7-XDj" secondAttribute="bottom" constant="20" symbolic="YES" id="cZZ-kQ-ann"/>
+                            <constraint firstItem="nwX-gs-mpI" firstAttribute="top" secondItem="uOj-NW-Mdh" secondAttribute="bottom" constant="20" id="cbo-4e-TXF"/>
+                            <constraint firstItem="jJe-WX-BPz" firstAttribute="centerY" secondItem="uOj-NW-Mdh" secondAttribute="centerY" id="dg2-tx-lop"/>
+                            <constraint firstItem="uOj-NW-Mdh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="xNK-Gn-ycz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Zahlen Lernen" id="L2p-EZ-MpM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="zQ0-f8-WmO">
+                            <connections>
+                                <action selector="regenerateButtonAction:" destination="BYZ-38-t0r" id="hAR-mf-8kq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="auftragSlider" destination="uOj-NW-Mdh" id="zUK-O2-4sE"/>
+                        <outlet property="auftragStepper" destination="jJe-WX-BPz" id="DVp-Vd-IZD"/>
+                        <outlet property="spelledOutTextView" destination="Iwk-dx-iXy" id="gf3-d6-AqB"/>
+                        <outlet property="zahlenTextField" destination="nwX-gs-mpI" id="VmA-3w-tAz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gG2-DX-ORr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VIa-uF-51w" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="DPe-5Q-8qh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.86919005540000005" green="1" blue="0.7175147959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5PA-cg-9Bc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MNo-EM-pu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
